@@ -1,3 +1,8 @@
+<h3>All Posts</h3>
+
 <% @posts.each do |post| %>
-  <div><%= post.title %></div>
+  <p>
+    <b><%= "#{post.id}. #{post.title}: " %></b>
+    <%= post.description %>
+  </p>
 <% end %>

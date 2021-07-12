@@ -761,3 +761,542 @@ Processing by PostsController#edit as HTML
   [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
   Rendered posts/edit.html.erb within layouts/application (16.0ms)
 Completed 200 OK in 347ms (Views: 318.0ms | ActiveRecord: 0.4ms)
+Started GET "/" for 127.0.0.1 at 2021-07-12 13:12:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (2.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (22.3ms)
+Completed 200 OK in 184ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:12:38 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (14.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (38.6ms)
+Completed 200 OK in 2376ms (Views: 2211.2ms | ActiveRecord: 30.3ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-07-12 13:12:44 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 569ms (Views: 457.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-07-12 13:12:47 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 616ms (Views: 495.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2021-07-12 13:12:53 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 337ms (ActiveRecord: 2.9ms)
+
+
+  
+SyntaxError (/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+...d=( f.text_area, :description );@output_buffer.safe_append='...
+...                              ^
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:12: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:14: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:16: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/edit.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/posts/edit.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/posts/edit.html.erb:14: syntax error, unexpected ensure, expecting ')'
+app/views/posts/edit.html.erb:16: syntax error, unexpected end, expecting ')'
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.0ms)
+Started GET "/posts/1/edit" for 127.0.0.1 at 2021-07-12 13:20:28 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (4.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 380ms (ActiveRecord: 4.5ms)
+
+
+  
+SyntaxError (/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+...d=( f.text_area, :description );@output_buffer.safe_append='...
+...                              ^
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:12: syntax error, unexpected end, expecting ')'
+'.freeze; end 
+          ^~~
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:14: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/edit.html.erb:16: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/posts/edit.html.erb:9: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/posts/edit.html.erb:12: syntax error, unexpected end, expecting ')'
+app/views/posts/edit.html.erb:14: syntax error, unexpected ensure, expecting ')'
+app/views/posts/edit.html.erb:16: syntax error, unexpected end, expecting ')'
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.7ms)
+Started GET "/posts/1/edit" for 127.0.0.1 at 2021-07-12 13:21:28 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (109.8ms)
+Completed 500 Internal Server Error in 462ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `test_field' for #<ActionView::Helpers::FormBuilder:0x00007f113e1ab7a0>
+Did you mean?  text_field
+               time_field):
+    3: <%= form_for(@post) do |f| %>
+    4: 
+    5:   <label>Post title:</label><br>
+    6:   <%= f.test_field :title %><br>
+    7: 
+    8:   <label>Post description:</label><br>
+    9:   <%= f.text_area :description %><br>
+  
+app/views/posts/edit.html.erb:6:in `block in _app_views_posts_edit_html_erb__3918854882991740315_69856016491320'
+app/views/posts/edit.html.erb:3:in `_app_views_posts_edit_html_erb__3918854882991740315_69856016491320'
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (30.5ms)
+Started GET "/posts/1/edit" for 127.0.0.1 at 2021-07-12 13:21:43 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (95.8ms)
+Completed 200 OK in 701ms (Views: 599.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2021-07-12 13:41:49 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (4.7ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 573ms (Views: 469.5ms | ActiveRecord: 4.7ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2021-07-12 13:42:03 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iic9a+MDbKYEQIvN8tlFmd3JhucGPSmfLm19mdHaL1mh4Mob/TMBCMU+kdzoLisNYDlZ4nM/+vM9+qakYudCww==", "post"=>{"title"=>"Rails Introduction Quiz", "description"=>"description update"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.9ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", nil], ["description", nil], ["updated_at", "2021-07-12 20:42:03.922539"], ["id", 1]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 27ms (ActiveRecord: 19.5ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2021-07-12 13:42:03 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (5.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 605ms (Views: 479.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:42:21 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (4.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 595ms (Views: 498.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-07-12 13:42:28 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 528ms (Views: 441.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2021-07-12 13:42:31 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (2.6ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 569ms (Views: 470.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-07-12 13:44:43 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GHE8rJ69pTZDuLpKXq+S2AKUnQXTJmvxmvRuboOph4QztsvcgI3ImILGoFtEWPxMv2RCAKYkuJ2JY7VTMJTqHg==", "title"=>"new title", "description"=>"new description\r\n", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "new title"], ["description", "new description\r\n"], ["created_at", "2021-07-12 20:44:43.359577"], ["updated_at", "2021-07-12 20:44:43.359577"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 22ms (ActiveRecord: 15.2ms)
+
+
+Started GET "/posts/5" for 127.0.0.1 at 2021-07-12 13:44:43 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 627ms (Views: 525.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:44:48 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 555ms (Views: 464.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:46:32 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 319ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/index.html.erb:9: unterminated string meets end of file
+          end
+              ^
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/index.html.erb:9: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/posts/index.html.erb:9: unterminated string meets end of file
+app/views/posts/index.html.erb:9: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.5ms)
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:46:41 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 330ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/index.html.erb:9: unterminated string meets end of file
+          end
+              ^
+/mnt/c/Users/nick/Development/code/mod3/rails-form_for-on-edit-readme/app/views/posts/index.html.erb:9: syntax error, unexpected end-of-input, expecting ')'):
+  
+app/views/posts/index.html.erb:9: unterminated string meets end of file
+app/views/posts/index.html.erb:9: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.6ms)
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:47:31 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (102.1ms)
+Completed 500 Internal Server Error in 411ms (ActiveRecord: 3.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `content' for #<Post:0x00007f113e0eed80>):
+    1: <% @posts.each do |post| %>
+    2:   <p>
+    3:     <h3><%= "#{post.title}:" %></h3>
+    4:     <%= post.content %>
+    5:   </p>
+    6: <% end %>
+  
+app/views/posts/index.html.erb:4:in `block in _app_views_posts_index_html_erb___2498501911292426345_69856016136340'
+app/views/posts/index.html.erb:1:in `_app_views_posts_index_html_erb___2498501911292426345_69856016136340'
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.7ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.6ms)
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:48:01 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 570ms (Views: 473.2ms | ActiveRecord: 3.5ms)
+
+
+  [1m[36mPost Load (20.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mPost Load (3.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 1]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.5ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.9ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 3]]
+  [1m[35m (11.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (12.1ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (16.6ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 5]]
+  [1m[35m (18.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+Started GET "/" for 127.0.0.1 at 2021-07-12 13:49:01 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.1/lib/rails/templates/rails/welcome/index.html.erb (22.2ms)
+Completed 200 OK in 125ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:49:06 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (8.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 1666ms (Views: 1514.7ms | ActiveRecord: 14.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:49:52 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 602ms (Views: 484.2ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-07-12 13:49:59 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 577ms (Views: 481.0ms | ActiveRecord: 7.9ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-07-12 13:50:07 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4Es+wtgRDA7yyw8K5hdGw4fpv55JNDRQkFXGOijnrP/LjMmyxiFhoDO1FRv84ChXOhlgmzw25zyDwh0Hm9rBZQ==", "title"=>"t1", "description"=>"d1", "commit"=>"Submit Post"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (6.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "t1"], ["description", "d1"], ["created_at", "2021-07-12 20:50:07.345204"], ["updated_at", "2021-07-12 20:50:07.345204"]]
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 23ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2021-07-12 13:50:07 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (3.4ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 659ms (Views: 502.1ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:50:13 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 605ms (Views: 492.2ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:50:23 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 668ms (Views: 562.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:50:29 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 613ms (Views: 519.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-07-12 13:50:35 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 621ms (Views: 534.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-07-12 13:50:42 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1SuVqVClXp0EMK/Z4UVM4y3MyNTg7Lo0p06OzlCfjmX+7GLZTpUzM8VOtcj7siJ3kDwX0ZXuaVi02VXz46Lj/w==", "title"=>"t2", "description"=>"d2", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.0ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "t2"], ["description", "d2"], ["created_at", "2021-07-12 20:50:42.321634"], ["updated_at", "2021-07-12 20:50:42.321634"]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 21ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/posts/7" for 127.0.0.1 at 2021-07-12 13:50:42 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 603ms (Views: 496.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2021-07-12 13:50:47 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 567ms (Views: 479.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2021-07-12 13:50:53 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GVnxVpPAOJ9A77q8ln2NDl+AMCicIDmBbojZXjWUjbAyngYmjfBVMYGRoK2MiuOa4nDvLeki6u19HwJjhqngKg==", "title"=>"t3", "description"=>"d3", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (9.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "t3"], ["description", "d3"], ["created_at", "2021-07-12 20:50:54.039633"], ["updated_at", "2021-07-12 20:50:54.039633"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 22ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/posts/8" for 127.0.0.1 at 2021-07-12 13:50:54 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (4.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 647ms (Views: 528.2ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:50:57 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 492ms (Views: 413.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:51:51 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 572ms (Views: 453.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2021-07-12 13:52:00 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (3.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (92.2ms)
+Completed 200 OK in 648ms (Views: 553.6ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/posts/6" for 127.0.0.1 at 2021-07-12 13:52:09 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7GDXPZZl628m+YjxoPMJh8ufKAYC1GkbHuHysUXkwNDHpyBNiFWGweeHkuC6BGcTdm/3A3fWuncNdimM9tmtSg==", "post"=>{"title"=>"t1", "description"=>"edited"}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[36mPost Load (4.0ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.3ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", nil], ["description", nil], ["updated_at", "2021-07-12 20:52:09.311824"], ["id", 6]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 26ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2021-07-12 13:52:09 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (3.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 579ms (Views: 473.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:52:38 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 571ms (Views: 482.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/posts/6/edit" for 127.0.0.1 at 2021-07-12 13:55:53 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (2.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  Rendered posts/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 752ms (Views: 578.8ms | ActiveRecord: 16.1ms)
+
+
+Started PATCH "/posts/6" for 127.0.0.1 at 2021-07-12 13:56:03 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xgVFEjopBQ8+uoyNhYM+8ZyFKH/lwCVAB2x1d5Jdi27twrJiJBloof/ElpyfdFBlIXX3epDC9iwU+65KIWDm9A==", "post"=>{"title"=>"trying", "description"=>"to edit"}, "commit"=>"Update Post", "id"=>"6"}
+  [1m[36mPost Load (3.5ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  [1m[33mUPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "trying"], ["description", "to edit"], ["updated_at", "2021-07-12 20:56:03.942537"], ["id", 6]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 25ms (ActiveRecord: 17.6ms)
+
+
+Started GET "/posts/6" for 127.0.0.1 at 2021-07-12 13:56:03 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (3.9ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 648ms (Views: 550.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2021-07-12 13:56:07 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (3.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 609ms (Views: 503.6ms | ActiveRecord: 3.7ms)
+
+
